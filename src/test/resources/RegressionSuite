@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="RegressionSuite">
+    <test name="Amazon suite tests" >
+        <classes>
+            <class name="com.alex.test.MainPageTest" />
+        </classes>
+
+    </test>
+</suite>

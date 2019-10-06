@@ -21,7 +21,8 @@ public class BasePage {
 
     // Wait Wrapper Method
     public void waitVisibility(By elementBy) {
-        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(elementBy));
+        //wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(elementBy));
+        wait.until(ExpectedConditions.elementToBeClickable(elementBy));
     }
 
     // Click Method
@@ -56,8 +57,8 @@ public class BasePage {
         dropdownSelect.selectByValue(value);
     }
 
-    //Assert by text of the Web Element
-    public void assertEqualsByText(By elementBy, String expectedText) {
+    // Assert by text of the Web Element
+    public void assertEqualsByText(String expectedText, By elementBy) {
         waitVisibility(elementBy);
         Assert.assertEquals(expectedText, getText(elementBy));
     }
